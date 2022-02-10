@@ -33,8 +33,6 @@ public class Job {
         this.coreCompetency = cc;
     }
 
-
-
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
@@ -50,7 +48,6 @@ public class Job {
     public int hashCode() {
         return Objects.hash(id);
     }
-
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
@@ -97,5 +94,28 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    public String checkData(String data) {
+
+        if (data.isEmpty()) {
+            return "Data not available";
+        } else {
+            return data;
+        }
+    }
+
+    public String toString() {
+        String job;
+
+        job = "\n ID: " + this.getId();
+        job = job + "\n Name: " + checkData(this.getName());
+        job = job + "\n Employer: " + checkData(this.getEmployer().getValue());
+        job = job + "\n Location: " + checkData(this.getLocation().getValue());
+        job = job + "\n Position Type: " + checkData(this.getPositionType().getValue());
+        job = job + "\n Core Competency: " + checkData(this.getCoreCompetency().getValue());
+
+        return job;
+
     }
 }
