@@ -108,12 +108,12 @@ public class Job {
     public String toString() {
         String job;
 
-        job = "\n ID: " + this.getId();
-        job = job + "\n Name: " + checkData(this.getName());
-        job = job + "\n Employer: " + checkData(this.getEmployer().getValue());
-        job = job + "\n Location: " + checkData(this.getLocation().getValue());
-        job = job + "\n Position Type: " + checkData(this.getPositionType().getValue());
-        job = job + "\n Core Competency: " + checkData(this.getCoreCompetency().getValue());
+        job = "\nID: " + this.getId();
+        job = job + "\nName: " + checkData(this.getName());
+        job = job + "\nEmployer: " + checkData(this.getEmployer().getValue());
+        job = job + "\nLocation: " + checkData(this.getLocation().getValue());
+        job = job + "\nPosition Type: " + checkData(this.getPositionType().getValue());
+        job = job + "\nCore Competency: " + checkData(this.getCoreCompetency().getValue());
 
         return job;
 
