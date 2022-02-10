@@ -56,6 +56,10 @@ public class Job {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -113,7 +117,7 @@ public class Job {
         job = job + "\nEmployer: " + checkData(this.getEmployer().getValue());
         job = job + "\nLocation: " + checkData(this.getLocation().getValue());
         job = job + "\nPosition Type: " + checkData(this.getPositionType().getValue());
-        job = job + "\nCore Competency: " + checkData(this.getCoreCompetency().getValue());
+        job = job + "\nCore Competency: " + checkData(this.getCoreCompetency().getValue()) + "\n";
 
         return job;
 
