@@ -3,11 +3,11 @@ package org.launchcode.techjobs.oo.test;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.launchcode.techjobs.oo.*;
+
+import static org.junit.Assert.*;
 
 /**
  * Created by LaunchCode
@@ -42,6 +42,14 @@ public class JobTest {
         test_job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertFalse(test_job1.equals(test_job2.getId()));
 
+    }
+
+    @Test
+    public void testJobsForToString() {
+        test_job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String job = "\nID: " + test_job1.getId() + "\nName: Product tester" + "\nEmployer: ACME" + "\nLocation: Desert" + "\nPosition Type: Quality control" + "\nCore Competency: Persistence\n";
+
+        assertTrue(test_job1.toString().equals(job));
     }
 
 
